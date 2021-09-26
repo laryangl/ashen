@@ -59,17 +59,17 @@ async def fetch_info(replied_user, event):
     username = "@{}".format(username) if username else ("This User has no Username")
     user_bio = "This User has no About" if not user_bio else user_bio
     caption = "<b><i>USER INFO from Durov's Database :</i></b>\n\n"
-    caption += f"<b>👤 First Name:</b> {first_name} {last_name}\n"
-    caption += f"<b>🤵 Username:</b> {username}\n"
-    caption += f"<b>🔖 ID:</b> <code>{user_id}</code>\n"
-    caption += f"<b>🌏 Data Centre ID:</b> {dc_id}\n"
-    caption += f"<b>🖼 Number of Profile Pics:</b> {replied_user_profile_photos_count}\n"
-    caption += f"<b>🤖 Is Bot:</b> {is_bot}\n"
-    caption += f"<b>🔏 Is Restricted:</b> {restricted}\n"
-    caption += f"<b>🌐 Is Verified by Telegram:</b> {verified}\n\n"
-    caption += f"<b>✍️ Bio:</b> \n<code>{user_bio}</code>\n\n"
-    caption += f"<b>👥 Common Chats with this user:</b> {common_chat}\n"
-    caption += "<b>🔗 Permanent Link To Profile:</b> "
+    caption += f"<b>  𝙁𝙞𝙧𝙨𝙩 𝙉𝙖𝙢𝙚:</b> {first_name} {last_name}\n"
+    caption += f"<b> 𝙐𝙨𝙚𝙧𝙣𝙖𝙢𝙚:</b> {username}\n"
+    caption += f"<b> 𝙄𝘿:</b> <code>{user_id}</code>\n"
+    caption += f"<b>𝘿𝙖𝙩𝙖 𝘾𝙚𝙣𝙩𝙧𝙚 𝙄𝘿:</b> {dc_id}\n"
+    caption += f"<b> 𝙉𝙪𝙢𝙗𝙚𝙧 𝙤𝙛 𝙋𝙧𝙤𝙛𝙞𝙡𝙚 𝙋𝙞𝙘𝙨:</b> {replied_user_profile_photos_count}\n"
+    caption += f"<b>𝙄𝙨 𝘽𝙤𝙩:</b> {is_bot}\n"
+    caption += f"<b>Is 𝙍𝙚𝙨𝙩𝙧𝙞𝙘𝙩𝙚𝙙:</b> {restricted}\n"
+    caption += f"<b> 𝙄𝙨 𝙑𝙚𝙧𝙞𝙛𝙞𝙚𝙙 𝙗𝙮 𝙏𝙚𝙡𝙚𝙜𝙧𝙖𝙢:</b> {verified}\n\n"
+    caption += f"<b>✍𝘽𝙞𝙤:</b> \n<code>{user_bio}</code>\n\n"
+    caption += f"<b> 𝘾𝙤𝙢𝙢𝙤𝙣 𝘾𝙝𝙖𝙩𝙨 𝙬𝙞𝙩𝙝 𝙩𝙝𝙞𝙨 𝙪𝙨𝙚𝙧:</b> {common_chat}\n"
+    caption += "<b>Permanent Link To Profile:</b> "
     caption += f'<a href="tg://user?id={user_id}">{first_name}</a>'
     return photo, caption
 
@@ -147,7 +147,7 @@ async def _(event):
 
 
 @catub.cat_cmd(
-    pattern="whois(?:\s|$)([\s\S]*)",
+    pattern="ايدي(?:\s|$)([\s\S]*)",
     command=("whois", plugin_category),
     info={
         "header": "Gets info of an user.",
@@ -187,7 +187,7 @@ async def who(event):
 
 
 @catub.cat_cmd(
-    pattern="link(?:\s|$)([\s\S]*)",
+    pattern="رابط الحساب(?:\s|$)([\s\S]*)",
     command=("link", plugin_category),
     info={
         "header": "Generates a link to the user's PM .",
