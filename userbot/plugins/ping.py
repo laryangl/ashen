@@ -9,7 +9,7 @@ plugin_category = "tools"
 
 
 @catub.cat_cmd(
-    pattern="ping( -a|$)",
+    pattern="بنك( -a|$)",
     command=("ping", plugin_category),
     info={
         "header": "check how long it takes to ping your userbot",
@@ -32,7 +32,7 @@ async def _(event):
         ms = round((tms - 0.6) / 3, 3)
         await catevent.edit(f"Average Pong!\n`{ms} ms`")
     else:
-        catevent = await edit_or_reply(event, "Pong!")
+        catevent = await edit_or_reply(event, "𝙎𝙥𝙚𝙚𝙙 ​​𝙞𝙨 𝙗𝙚𝙞𝙣𝙜 𝙢𝙚𝙖𝙨𝙪𝙧𝙚𝙙 𝙣𝙤𝙬..!")
         end = datetime.now()
         ms = (end - start).microseconds / 1000
         await catevent.edit(f"Pong!\n`{ms} ms`")
