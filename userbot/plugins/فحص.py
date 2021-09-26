@@ -25,7 +25,7 @@ plugin_category = "utils"
 
 
 @catub.cat_cmd(
-    pattern="alive$",
+    pattern="فحص$",
     command=("alive", plugin_category),
     info={
         "header": "To check bot's alive status",
@@ -40,7 +40,7 @@ async def amireallyalive(event):
     reply_to_id = await reply_id(event)
     uptime = await get_readable_time((time.time() - StartTime))
     start = datetime.now()
-    catevent = await edit_or_reply(event, "`Checking...`")
+    catevent = await edit_or_reply(event, ".•♫•♬•.•𝘾𝙝𝙚𝙘𝙠𝙞 𝙥𝙧𝙤𝙜𝙧𝙚𝙨𝙨•♬•♫•.•♬•")
     end = datetime.now()
     ms = (end - start).microseconds / 1000
     _, check_sgnirts = check_data_base_heal_th()
@@ -80,12 +80,12 @@ async def amireallyalive(event):
 
 
 temp = """{ALIVE_TEXT}
-**{EMOJI} Database :** `{dbhealth}`
-**{EMOJI} Telethon Version :** `{telever}`
-**{EMOJI} Catuserbot Version :** `{catver}`
-**{EMOJI} Python Version :** `{pyver}`
-**{EMOJI} Uptime :** `{uptime}`
-**{EMOJI} Master:** {mention}"""
+**{EMOJI}  قاعده البيانات :** `{dbhealth}`
+**{EMOJI} اصدار التلثيون :** `{telever}`
+**{EMOJI} اصدار اشين Version :** `{catver}`
+**{EMOJI} اصدار البايثون:** `{pyver}`
+**{EMOJI} الوقت المستخدم :** `{uptime}`
+**{EMOJI} المطور:** {mention}"""
 
 
 @catub.cat_cmd(
